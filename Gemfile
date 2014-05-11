@@ -23,6 +23,7 @@ group :development do
   gem 'bullet'
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :development, :test do
