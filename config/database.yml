@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mail_robber_development
+  host: localhost
+  pool: 5
+  username: ilyagelman
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mail_robber_test
+  host: localhost
+  pool: 5
+  username: ilyagelman
+  password:

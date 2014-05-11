@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3175098224">
+    <data-source source="LOCAL" name="Rails mail_robber: development" uuid="7a8bdd4a-124f-49da-b58b-d6b4874cf47d">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/mail_robber_development</jdbc-url>
+      <user-name>ilyagelman</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails mail_robber: test" uuid="e5142da6-cb8c-46b1-a9db-f789f5744705">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/mail_robber_test</jdbc-url>
+      <user-name>ilyagelman</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
