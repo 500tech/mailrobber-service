@@ -8,8 +8,8 @@ MailRobber::Application.routes.draw do
 
     post 'emails/create'
     post 'emails/destroy'
-    post 'emails/index'
-    post 'emails/show'
+    get 'emails/:token', to: 'emails#index'
+    get 'emails/:token/:email_id', to: 'emails#show'
   end
 
   # get "emails/index"

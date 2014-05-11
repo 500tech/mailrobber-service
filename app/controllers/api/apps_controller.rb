@@ -1,4 +1,6 @@
 class API::AppsController < ApplicationController
+  respond_to :json
+
   def create
     app = App.new(token: params[:token], name: params[:app_name])
     if app.save
@@ -10,11 +12,11 @@ class API::AppsController < ApplicationController
 
   def show
     app = App.find_by(token: params[:token])
-    render json: app, status: :found
+    respond_with app, status: :ok
   end
 
   def destroy
     app = App.find_by(token: params[:token]).destroy
-    render json: app, status: :ok
+    respond_with app, status: :ok
   end
 end

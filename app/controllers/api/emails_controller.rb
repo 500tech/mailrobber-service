@@ -1,4 +1,6 @@
 class API::EmailsController < ApplicationController
+  respond_to :json
+
   def create
     app = App.find_by(token: params[:token])
     new_email = app.emails.new( from:        params[:from],
@@ -20,7 +22,7 @@ class API::EmailsController < ApplicationController
     app = App.includes(:emails).find_by(token: params[:token])
     emails = app.emails rescue nil
     if emails
-      render json: emails, status: :found
+      respond_with emails, status: :ok
     else
       render json: 'No emails found for this app', status: :not_found
     end
@@ -30,7 +32,7 @@ class API::EmailsController < ApplicationController
     app = App.includes(:emails).find_by(token: params[:token])
     email = app.emails.find(params[:email_id]) rescue nil
     if email
-      render json: email, status: :found
+      respond_with email, status: :ok
     else
       render json: 'Email not found', status: :not_found
     end
