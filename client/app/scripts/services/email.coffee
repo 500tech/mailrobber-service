@@ -8,4 +8,7 @@ class Service
   show: (token, email_id) ->
     @emails.customGET(token + '/' + email_id).$object
 
+  delete: (token, email_id) ->
+    console.log('delete', token, email_id)
+
 app.service 'Email', ['Restangular', Service]

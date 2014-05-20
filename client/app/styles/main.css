@@ -80,3 +80,7 @@ a:hover {
   display: inline-block;
   font-weight: bold;
 }
+
+.page-footer {
+  margin-top: 50px;
+}

@@ -10,7 +10,7 @@
       <a href="#/{{app.data.token}}/{{email.id}}">{{email.subject || 'No Subject'}}</a>
       {{email.from}}
       {{email.to}}
-      <a href="" ng-show="email.html_part" class='btn btn-blue'>HTML</a>
+      <a href="#/{{app.data.token}}/{{email.id}}/html" ng-show="email.html_part" class='btn btn-blue'>HTML</a>
     </li>
   </ul>
   <div ng-show="!app.emails.length">We didn’t receive any emails from this app yet.</div>
