@@ -1,79 +1,82 @@
-/* Space out content a bit */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+.btn {
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-size: 12px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+a.btn  {
+  text-decoration: none;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.btn-blue {
+  border: 1px solid #4A90E2;
+  color: #4A90E2;
 }
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
+.btn-blue:hover {
+  background-color: #4A90E2;
+  color: white;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.btn-red {
+  border: 1px solid #D0021B;
+  color: #D0021B;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.btn-red:hover {
+  background-color: #D0021B;
+  color: white;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.email-list li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav .copyright {
+  float: right;
+  margin-right: 0;
+}
+
+code {
+  background-color: #4A90E2;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #4A90E2;
+}
+
+.float-right {
+  float: right;
+}
+
+.email-text-part {
+  font-family: Arial, sans-serif;
+}
+
+.email-subject {
+  display: inline-block;
+  font-weight: bold;
 }

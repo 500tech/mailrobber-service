@@ -5,6 +5,7 @@ MailRobber::Application.routes.draw do
     # resources :emails, only: [:create, :destroy]
     post 'apps/create'
     post 'apps/destroy'
+    get 'apps/:token', to: 'apps#show'
 
     post 'emails/create'
     post 'emails/destroy'

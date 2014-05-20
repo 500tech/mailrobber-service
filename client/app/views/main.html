@@ -1,36 +1,36 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">client</h3>
-</div>
+<h1>Mail Robber</h1>
+<h2>Simple email testing for Rails</h2>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<p>Include <code>gem ‘mail_robber’</code> in your Gemfile.</p>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<p>
+  Register an app on mailrobber.com:
+  <code>rails g mail_robber:install</code>
+</p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+<p>
+  View emails sent from your app:
+  <code>rake mail_robber:open</code>
+</p>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+<p>
+  You can customize settings in config/initializers/mail_robber.rb:
+  <pre>
+    MailRobber.configure do |config|
+      config.enabled = true
+      config.block_delivery = false
+      config.api_key = 'w29m391z295700382fhsi'
+    end
+  </pre>
+</p>
 
-<div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-</div>
+<footer>
+  <nav>
+    <ul class="footer-nav">
+      <li><a href="#/about">Who is behind this?</a></li>
+      <li><a href="#/terms">Terms and Privacy</a></li>
+      <li><a href="#/feedback">Feedback</a></li>
+      <li class="copyright">by <a href="http://500tech.com">500Tech</a></li>
+    </ul>
+  </nav>
+</footer>
