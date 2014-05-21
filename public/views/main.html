@@ -1,0 +1,7 @@
+<h1>Mail Robber</h1><h2>Simple email testing for Rails</h2><p>Include <code>gem ‘mail_robber’</code> in your Gemfile.</p><p>Register an app on mailrobber.com: <code>rails g mail_robber:install</code></p><p>View emails sent from your app: <code>rake mail_robber:open</code></p><p>You can customize settings in config/initializers/mail_robber.rb:<pre>
+    MailRobber.configure do |config|
+      config.enabled = true
+      config.block_delivery = false
+      config.api_key = 'w29m391z295700382fhsi'
+    end
+  </pre></p>
