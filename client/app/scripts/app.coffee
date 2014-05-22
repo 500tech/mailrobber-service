@@ -10,7 +10,7 @@
 ])
 
 .config (RestangularProvider) ->
-  RestangularProvider.setBaseUrl('http://www.mailrobber.com/api')
+  RestangularProvider.setBaseUrl('http://localhost:3000/api')
 
 .config ($routeProvider) ->
   $routeProvider

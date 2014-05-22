@@ -10,9 +10,9 @@
     <li><span>Received at: </span>{{app.email.created_at | date:'MMMM dd, yyyy hh:mm'}}</li>
   </ul>
   <span class="email-subject">{{app.email.subject || 'No Subject'}}</span>
-  <a href="" class="btn btn-blue" ng-show="app.email.html_part">Show HTML version</a>
+  <a href="#/{{app.data.token}}/{{app.email.id}}/html" class="btn btn-blue" ng-show="app.email.html_part">Show HTML version</a>
   <a href="" class="btn btn-red float-right" ng-click="deleteEmail()">Delete email</a>
   <hr/>
-  <div class="email text_part">{{app.email.text_part}}</div>
+  <div class="email-text-part">{{app.email.text_part}}</div>
 </div>
 <div ng-show="!app.email.id">Email not found</div>
