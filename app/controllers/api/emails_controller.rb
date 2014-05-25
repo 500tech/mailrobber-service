@@ -32,7 +32,11 @@ class API::EmailsController < ApplicationController
     app = App.includes(:emails).find_by(token: params[:token])
     email = app.emails.find(params[:email_id]) rescue nil
     if email
-      respond_with email, status: :ok
+      # Add attachments to email JSON
+      email_with_attachments = JSON.parse(email.to_json)
+      email_with_attachments['attachments'] = JSON.parse(email.attachments.to_json)
+
+      respond_with email_with_attachments, status: :ok
     else
       render json: 'Email not found', status: :not_found
     end
@@ -58,7 +62,7 @@ class API::EmailsController < ApplicationController
           f = FilelessIO.new(a[:raw_source])
           f.original_filename = a[:filename]
           f.content_type = a[:content_type]
-          EmailAttachment.create!(attachment: f, email_id: new_email.id)
+          Attachment.create!(attachment: f, email_id: new_email.id)
         end
       end
     end

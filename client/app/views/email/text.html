@@ -9,6 +9,13 @@
     <li><span>BCC: </span>{{app.email.bcc}}</li>
     <li><span>Received at: </span>{{app.email.created_at | date:'MMMM dd, yyyy hh:mm'}}</li>
   </ul>
+
+  <ul ng-show="app.email.attachments.length">
+    <li ng-repeat="attachment in app.email.attachments">
+      <a href="{{attachment.attachment.url}}">{{attachment.attachment.url | filename}}</a>
+    </li>
+  </ul>
+
   <span class="email-subject">{{app.email.subject || 'No Subject'}}</span>
   <a href="#/{{app.data.token}}/{{app.email.id}}/html" class="btn btn-blue" ng-show="app.email.html_part">Show HTML version</a>
   <a href="" class="btn btn-red float-right" ng-click="deleteEmail()">Delete email</a>
