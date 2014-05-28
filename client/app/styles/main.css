@@ -1,10 +1,27 @@
-body, ul {
+* {
+  box-sizing: border-box;
+}
+
+body, ul, h4 {
   margin: 0;
   padding: 0;
 }
 
+hr {
+  margin: 15px 0;
+}
+
 body {
+  padding-top: 40px;
   font-family: 'Nunito', sans-serif;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.back-link {
+  padding-top: -20px;
 }
 
 .btn {
@@ -37,9 +54,18 @@ a.btn  {
   color: white;
 }
 
+.email-headers li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
 .email-list li {
   list-style-type: none;
   margin-bottom: 10px;
+}
+
+.unread {
+  font-weight: bold;
 }
 
 .footer-nav li {
@@ -72,6 +98,10 @@ a:hover {
   float: right;
 }
 
+.email-text-part, .email-html-part {
+  padding: 10px;
+}
+
 .email-html-part {
   font-family: Arial, sans-serif;
 }
@@ -79,8 +109,14 @@ a:hover {
 .email-subject {
   display: inline-block;
   font-weight: bold;
+  margin-top: 30px;
+  margin-right: 10px;
 }
 
 .page-footer {
   margin-top: 50px;
+}
+
+.blue-500 {
+  color: #40a9f3;
 }

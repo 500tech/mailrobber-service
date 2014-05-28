@@ -15,6 +15,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -24,18 +25,21 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container">
+      <div class="row" ng-view=""></div>
 
-    <footer class="page-footer">
-      <nav>
-        <ul class="footer-nav">
-          <li><a href="#/about">Who is behind this?</a></li>
-          <li><a href="#/terms">Terms and Privacy</a></li>
-          <li><a href="#/feedback">Feedback</a></li>
-          <li class="copyright">by <a href="http://500tech.com">500Tech</a></li>
-        </ul>
-      </nav>
-    </footer>
+      <footer class="page-footer row col-md-12">
+        <hr/>
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="#/about">Who is behind this?</a></li>
+            <li><a href="#/terms">Terms and Privacy</a></li>
+            <li><a href="#/feedback">Feedback</a></li>
+            <li class="copyright">by <a href="http://500tech.com"><span class="blue-500">500</span>Tech</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
