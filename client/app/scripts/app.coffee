@@ -17,6 +17,13 @@
     .when '/',
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
+    .when '/about',
+      templateUrl: 'views/about.html'
+    .when '/terms',
+      templateUrl: 'views/terms.html'
+    .when '/feedback',
+      templateUrl: 'views/feedback.html'
+      controller: 'FeedbackCtrl'
     .when '/:token',
       templateUrl: 'views/app.html',
       controller: 'AppsCtrl'
