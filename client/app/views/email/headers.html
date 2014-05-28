@@ -1,0 +1,38 @@
+<div class="row">
+  <ul class="email-headers col-md-4">
+    <li>
+      <span class="col-md-4">From: </span>
+      <span class="col-md-8">{{app.email.from}}</span>
+    </li>
+    <li>
+      <span class="col-md-4">To: </span>
+      <span class="col-md-8">{{app.email.to}}</span>
+    </li>
+    <li ng-show="app.email.cc">
+      <span class="col-md-4">CC: </span>
+      <span class="col-md-8">{{app.email.cc}}</span>
+    </li>
+    <li ng-show="app.email.bcc">
+      <span class="col-md-4">BCC: </span>
+      <span class="col-md-8">{{app.email.bcc}}</span>
+    </li>
+    <li ng-show="app.email.environment">
+      <span class="col-md-4">Environment: </span>
+      <span class="col-md-8">{{app.email.environment}}</span>
+    </li>
+    <li>
+      <span class="col-md-4">Received at: </span>
+      <span class="col-md-8">{{app.email.created_at | date:'MMMM dd, yyyy hh:mm'}}</span>
+    </li>
+  </ul>
+
+  <div class="col-md-8">
+    <span ng-hide="app.email.attachments.length">No attachments</span>
+    <h4 ng-show="app.email.attachments.length">Attachments</h4>
+    <ul ng-show="app.email.attachments.length" class="email-headers">
+      <li ng-repeat="attachment in app.email.attachments">
+        <a href="{{attachment.attachment.url}}">{{attachment.attachment.url | filename}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
