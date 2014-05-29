@@ -28,9 +28,6 @@ header {
   border-radius: 2px;
   padding: 2px 4px;
   font-size: 12px;
-}
-
-a.btn  {
   text-decoration: none;
 }
 
@@ -52,20 +49,6 @@ a.btn  {
 .btn-red:hover {
   background-color: #D0021B;
   color: white;
-}
-
-.email-headers li {
-  list-style-type: none;
-  margin-bottom: 10px;
-}
-
-.email-list li {
-  list-style-type: none;
-  margin-bottom: 10px;
-}
-
-.unread {
-  font-weight: bold;
 }
 
 .footer-nav li {
@@ -92,25 +75,6 @@ a {
 
 a:hover {
   color: #4A90E2;
-}
-
-.float-right {
-  float: right;
-}
-
-.email-text-part, .email-html-part {
-  padding: 10px;
-}
-
-.email-html-part {
-  font-family: Arial, sans-serif;
-}
-
-.email-subject {
-  display: inline-block;
-  font-weight: bold;
-  margin-top: 30px;
-  margin-right: 10px;
 }
 
 .page-footer {

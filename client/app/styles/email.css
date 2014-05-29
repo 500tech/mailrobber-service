@@ -1,0 +1,28 @@
+.email-list li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.email-headers li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.unread {
+  font-weight: bold;
+}
+
+.email-text-part, .email-html-part {
+  padding: 10px;
+}
+
+.email-html-part {
+  font-family: Arial, sans-serif;
+}
+
+.email-subject {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-right: 10px;
+}
