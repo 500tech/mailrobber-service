@@ -1,4 +1,10 @@
 <h1>Feedback</h1>
+<p>We welcome any suggestions, offers, complains, praises or curses.<br/>
+  You may leave your email so we can answer you.</p>
 
-<p>Drop us a line: info@500tech.com</p>
-<!-- Add feedback form -->
+<form class="feedback-form" ng-submit="sendFeedback()">
+  <input tabindex="2" type="email" placeholder="Your email" ng-model="feedback.email"/><br/>
+  <textarea tabindex="1" autofocus ng-model="feedback.message" cols="80" rows="6"></textarea><br/>
+  <span ng-show="feedback.sent" class="feedback-sent">Thanks for your feedback, we'll look into it.</span>
+  <button tabindex="3" class="btn btn-blue">Send us your message</button>
+</form>
