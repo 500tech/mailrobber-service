@@ -1,0 +1,26 @@
+.feedback-form {
+  margin-top: 50px;
+}
+
+.feedback-sent {
+  color: limegreen;
+}
+
+.feedback-error, .feedback-blank {
+  color: red;
+}
+
+.feedback-sent, .feedback-error, .feedback-blank {
+  display: block;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 350px;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  padding: 5px;
+}

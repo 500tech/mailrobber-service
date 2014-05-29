@@ -85,23 +85,3 @@ a:hover {
 .blue-500 {
   color: #40a9f3;
 }
-
-.feedback-form {
-  margin-top: 50px;
-}
-
-.feedback-sent {
-  color: limegreen;
-  display: block;
-  margin-bottom: 20px;
-}
-
-input {
-  width: 350px;
-}
-
-input, textarea {
-  margin-bottom: 15px;
-  border: 1px solid #eee;
-  padding: 5px;
-}

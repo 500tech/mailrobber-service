@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140423085658) do
+ActiveRecord::Schema.define(version: 20140529053644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,21 +34,29 @@ ActiveRecord::Schema.define(version: 20140423085658) do
   add_index "attachments", ["email_id"], name: "index_attachments_on_email_id", using: :btree
 
   create_table "emails", force: true do |t|
-    t.integer  "app_id",     null: false
-    t.string   "from",       null: false
-    t.string   "to",         null: false
+    t.integer  "app_id",      null: false
+    t.string   "from",        null: false
+    t.string   "to",          null: false
     t.string   "cc"
     t.string   "bcc"
     t.string   "subject"
-    t.text     "text_part",  null: false
+    t.text     "text_part",   null: false
     t.text     "html_part"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "environment"
   end
 
   add_index "emails", ["app_id"], name: "index_emails_on_app_id", using: :btree
   add_index "emails", ["from"], name: "index_emails_on_from", using: :btree
   add_index "emails", ["subject"], name: "index_emails_on_subject", using: :btree
   add_index "emails", ["to"], name: "index_emails_on_to", using: :btree
+
+  create_table "feedbacks", force: true do |t|
+    t.string   "email"
+    t.string   "message",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
