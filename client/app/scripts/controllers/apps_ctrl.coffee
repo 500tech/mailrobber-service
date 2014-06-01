@@ -9,3 +9,7 @@ app.classy.controller
     @$.currentTime = @$window.Date()
     @$.lastTimeEntered = @$cookieStore.get('lastTimeEntered') || @$.currentTime
     @$cookieStore.put('lastTimeEntered', @$.currentTime)
+
+  toDate: (date)->
+    d = new Date(date)
+    d.toString()
