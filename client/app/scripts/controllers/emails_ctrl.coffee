@@ -11,4 +11,4 @@ app.classy.controller
       @$location.path(@$.app.data.token)
 
   unescapedHtml: (html) ->
-    $sce.trustAsHtml(html)
+    @$sce.trustAsHtml(html)
