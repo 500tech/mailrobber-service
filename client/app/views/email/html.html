@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="email-html-part col-md-12" ng-bind-html="app.email.html_part"></div>
+    <div class="email-html-part col-md-12" ng-bind-html="unescapedHtml(app.email.html_part)"></div>
   </div>
 </div>
 <div class="col-md-12" ng-show="!app.email.id">Email not found</div>
